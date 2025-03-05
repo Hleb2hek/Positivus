@@ -1,0 +1,12 @@
+body {
+	font-family: var(--font-famaly-base);
+	font-weight: 400;
+	font-style: 18px;
+	line-height: 1.28;
+	color:var(--color-dark);
+	background-color: var(--color-light);
+}
+
+a,button,input,textarea, svg * {
+	transition-duration: var(--transition-duration);
+}
