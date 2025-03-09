@@ -1,4 +1,5 @@
 :root {
+	// цвета
 	--color-dark: #191A23;
 	--color-dark-alt: #292A32;
 	--color-light: #FFFFFF;
@@ -6,22 +7,31 @@
 	--color-grey-alt: #898989;
 	--color-accent: #B9FF66;
 
+	// границы объектов
 	--border: 1px solid var(--color-dark);
 
+	// закруглённость границ объектов
 	--border-radius: 14px;
 	--border-radius-small: 7px;
 	--border-radius-large: 45px;
 
+	// тень объектов
 	--border-shadow: 0 5px 0 0 var(--color-dark);
+
+	// основной шрифт макета
 	--font-famaly-base:'Space Grotesk', sans-serif;
 
+	// параметры контейнера
 	--container-width: 1240px;
 	--container-padding-x: 16px;
 
+	// внутренние отступы секций
 	--section-padding-y: 70px
 
+	// высота input и btn
 	--input-height: 59px;
 	--button-height: 68px;
 
+	// скорость анимации тегов
 	--transition-duration: .2s;
 }

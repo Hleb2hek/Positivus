@@ -1,7 +1,11 @@
+@use 'mixins' as *;
+
 body {
+	// импортируем миксин и задаём глобально размеры текста
+	@include fluid-text (18,16);
+	
 	font-family: var(--font-famaly-base);
 	font-weight: 400;
-	font-style: 18px;
 	line-height: 1.28;
 	color:var(--color-dark);
 	background-color: var(--color-light);
@@ -9,4 +13,27 @@ body {
 
 a,button,input,textarea, svg * {
 	transition-duration: var(--transition-duration);
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+h1,h2,h3,h4 {
+	font-weight: 500;
+}
+
+// Для каждого заголовка глобально задаём размер текста через
+// миксин, мак и мин размер (есть среднее значение, оно высчитывается в миксине, чек mixins)
+h1 {
+	@include fluid-text(60,43)
+}
+h2 {
+	@include fluid-text(40,36)
+}
+h3 {
+	@include fluid-text(30,26)
+}
+h4 {
+	@include fluid-text(20,18)
 }

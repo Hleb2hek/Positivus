@@ -104,13 +104,13 @@ button {
 
 html {
   /**
-   Пригодится в большинстве ситуаций
-   (когда, например, нужно будет "прижать" футер к низу сайта)
+  Пригодится в большинстве ситуаций
+  (когда, например, нужно будет "прижать" футер к низу сайта)
   */
   height: 100%;
   /**
-   Убираем скачок интерфейса по горизонтали
-   при появлении / исчезновении скроллбара
+  Убираем скачок интерфейса по горизонтали
+  при появлении / исчезновении скроллбара
   */
   scrollbar-gutter: stable;
 }
@@ -201,14 +201,14 @@ svg * {
 }
 @font-face {
   font-family: "Space Grotesk";
-  src: url("/fonts/SpaceGrotesk-Regular.woff2") format("woff2");
+  src: url("/fonts/spacegrotesk-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Space Grotesk";
-  src: url("/fonts/SpaceGrotesk-Medium.woff2") format("woff2");
+  src: url("/fonts/spacegrotesk-medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -249,6 +249,7 @@ svg * {
   --container-width: 1240px;
   --container-padding-x: 16px;
   --section-padding-y: 70px
+  // высота input и btn
   --input-height: 59px;
   --button-height: 68px;
   --transition-duration: .2s;
@@ -286,9 +287,9 @@ svg * {
 }
 
 body {
+  font-size: clamp(16px, 1.25vw, 18);
   font-family: var(--font-famaly-base);
   font-weight: 400;
-  font-style: 18px;
   line-height: 1.28;
   color: var(--color-dark);
   background-color: var(--color-light);
@@ -296,6 +297,31 @@ body {
 
 a, button, input, textarea, svg * {
   transition-duration: var(--transition-duration);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: clamp(43px, 4.1666666667vw, 60);
+}
+
+h2 {
+  font-size: clamp(36px, 2.7777777778vw, 40);
+}
+
+h3 {
+  font-size: clamp(26px, 2.0833333333vw, 30);
+}
+
+h4 {
+  font-size: clamp(18px, 1.3888888889vw, 20);
 }
 
 /*# sourceMappingURL=styles.css.map */
