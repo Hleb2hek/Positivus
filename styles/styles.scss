@@ -1,1 +1,11 @@
-@use '/base/index.scss' as *;
+// Стили
+@use 'base/index' as *;
+
+// Блоки
+@use 'blocs/burger-btn' as *;
+@use 'blocs/btn' as *;
+@use 'blocs/cross-btn' as *;
+@use 'blocs/mobile-overlay' as *;
+
+// Секции
+@use 'blocs/header' as *;
