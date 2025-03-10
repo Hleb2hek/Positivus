@@ -218,7 +218,7 @@ svg * {
 первого параметра делённого на максимальную
 ширину лендинга помноженного на 100% высоту экрана
 */
-/* Миксин для тегов a наследования цвета от родителя
+/* Миксин для тегов наследования цвета от родителя
 и сброс нижнего подчёркивания ссылок
 */
 /* Миксин для сброса дефолтных
@@ -426,6 +426,7 @@ h4 {
   height: 100%;
   margin: 0;
   border: none;
+  padding: 14px 16px;
 }
 .mobile-overlay:modal {
   max-width: 100%;
@@ -544,4 +545,8 @@ h4 {
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+.section {
+  padding-block: var(--section-padding-y);
+}
+
+/*# sourceMappingURL=main.css.map */

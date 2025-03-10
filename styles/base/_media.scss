@@ -40,12 +40,17 @@ $mobile: 767px;
 	}
 };
 
+// Миксин для адаптации hover
 @mixin hover {
+	// Если медиа запрос поддерживает hover, то будет 
+	// использоваться псевдокласс hover
 	@media (hover: hover) {
 		&:hover {
 			@content
 		}
 	};
+	// Если медиа запрос не поддерживает hover, то
+	// будет использован псевдокласс active
 	@media (hover: none) {
 		&:active {
 			@content

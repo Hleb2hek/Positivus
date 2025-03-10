@@ -1,16 +1,22 @@
 @use '../base/index' as *;
 
+// бургер кнопка после нажатия и появления в модальном окне
 .cross-btn {
+	// Миксин для сброса стилей кнопки
 	@include reset-btn;
+	// Задаём размер одинаковой ширины и высоты
 	@include square(48px);
 
 	position: relative;
 	border-radius: var(--border-redius-small);
 
+	// Добавляем для кнопки 
+	// hover/active (в зависимости от медиа запроса)
 	@include hover {
 		background-color: var(--color-accent);
 	}
 
+	// Создаём 2 полосы
 	&::before,
 	&::after {
 		content: '';
@@ -23,6 +29,7 @@
 		border-radius: 5px;
 	}
 
+	// Проворачиваем обе полосы под нужным градусом
 	&::before {
 		rotate: 45deg;
 	}

@@ -1,71 +1,94 @@
 @use '../base/index' as *;
 
 .header {
+	// Внутреенний отступ сверху
 	padding-top: 60px;
 
+	// Миксин вызова медиа запроса 1280px, изменить отступ
 	@include desctop {
 		padding-top: 30px;
 	}
 
+	// Миксин вызова медиа запроса 767px, изменить отступ
 	@include mobile {
 		padding-top: 15px;
 	}
 	
+	// Блок всего контента header
 	&__inner {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		column-gap: 40px;
 
+		// Миксин вызова медиа запроса 1023px для этого блока
+		// изменить колончатые отступы в элементов
 		@include tablet {
 			column-gap: 20px;
 		}
 	}
 	
+	// Блок с лого
 	&__logo {
+		// Для блока лого вызываем миксин медиа запроса 1023px и меняем ширину
 		@include tablet {
 			max-width: 120px;
 		}
+		// Для блока лого вызываем миксин медиа запроса 767px и меняем ширину
 		@include mobile {
 			max-width: 144px;
 		}
 	}
 
+	// Блок навигации
 	&__menu {
+		// для внешнего отступа слева делаем авто, чтобы всё пространство слева
+		// было занято
 		margin-left: auto;
 		font-size: 20px;
 
+		// Для блока навигации вызываем миксин медиа
+		// запроса 1280px и меняем размер шрифта
 		@include desctop {
 			font-size: 18px;
 		}
-
+		// Для блока навигации вызываем миксин медиа
+		// запроса 1023px и меняем размер шрифта
 		@include tablet {
 			font-size: 16px;
 		}
 
+		// Блок навигационного списка
 		&-list {
 			display: flex;
 			align-items: center;
 			column-gap: 40px;
 
+			// Импортируем миксин медиа запроса 1280px для изменения
+			// расстояние между элементами
 			@include desctop {
 				column-gap: 20px;
 			}
 
 		}
 
+		// Строчные элементы навигации
 		&-link {
 			position: relative;
+			// Делаем строчным элементом, но флексом
 			display: inline-flex;
 			height: 48px;
 			align-items: center;
 
+			// Импортируем миксин для адаптации hover
 			@include hover {
 				&::after {
 					width: 100%;
 				}
 			}
 
+			// Для каждого строчного элемента списка навигаци
+			// под ним делаем появляющуюся полосу (с центра и в сторону) 
 			&::after {
 				content: '';
 				position: absolute;
@@ -80,7 +103,10 @@
 			}
 		}
 	}
+	// Блок кнопки навигации
 	&__btn {
+		// В зависимости от размера масштаба кнопка будет
+		// выглядеть иначе
 		@include desctop {
 			height: 58px;
 			padding-inline: 25px;

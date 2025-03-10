@@ -1,6 +1,8 @@
 @use '../base/index' as *;
 
 .btn {
+	// Миксин который при параметры true делает объект flex
+	// в противном случае делает flex-inline
 	@include flex-center(true);
 	height: var(--btn-height);
 	padding-inline: 35px;
