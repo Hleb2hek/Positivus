@@ -1,5 +1,6 @@
-@use '../base/index' as *;
-
 .section {
 	padding-block: var(--section-padding-y);
+	&-hidden-x {
+		overflow-x: hidden;
+	}
 }

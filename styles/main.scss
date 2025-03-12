@@ -1,12 +1,13 @@
 // Стили
-@use 'base/index' as *;
+@use "base/index" as *;
 
 // Блоки
-@use 'blocs/burger-btn' as *;
-@use 'blocs/btn' as *;
-@use 'blocs/cross-btn' as *;
-@use 'blocs/mobile-overlay' as *;
+@use "blocs/burger-btn" as *;
+@use "blocs/btn" as *;
+@use "blocs/cross-btn" as *;
+@use "blocs/mobile-overlay" as *;
 
 // Секции
-@use 'blocs/header' as *;
-@use 'blocs/section' as *;
+@use "blocs/header" as *;
+@use "blocs/hero" as *;
+@use "blocs/section" as *;
